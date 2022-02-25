@@ -42,7 +42,7 @@ pred_test_csv = model.predict(data_for_model_test_csv)
 pred_price = np.exp(pred_test_csv)
 
 #output csv
-pred_output_df = pd.DataFrame(pred_price, columns=['SalesPrice'])
+pred_output_df = pd.DataFrame(pred_price, columns=['SalePrice'])
 pred_output_df.insert(0,'Id', test_csv_input['Id'])
 # print(pred_output_df)
 pred_output_df.to_csv('ps2_pred.csv', index=-False)
